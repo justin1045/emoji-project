@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind  css -->
+    <link rel="stylesheet" href="output.css">
+    <!-- regular css -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Emoji-Find</title>
+</head>
+<body class="bg-[#ffdfbb]">
+    <h1 class="text-4xl font-bold text-center my-[1 rem] ">Emojee - Emoji 🔍 Application</h1>
+    <div class="search max-[560px]:flex-col max-[560px]:px-0  flex justify-center items-center gap-5 px-8 py-8">
+        <ul class="flex flex-wrap justify-center items-center font-semibold text-lime-50  gap-4">
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">All</li>
+            <li class="cursor-pointer bg-[#fdbb8f] px-2 py-1 rounded-md flex justify-center items-center">Face</li>
+            <li class="cursor-pointer bg-[#fdbb8f] px-2 py-1 rounded-md flex justify-center items-center">Heart</li>
+            <li class="cursor-pointer bg-[#fdbb8f] px-2 py-1 rounded-md flex justify-center items-center">Book</li>
+            <li class="cursor-pointer bg-[#fdbb8f] px-2 py-1 rounded-md flex justify-center items-center">Hand</li>
+            <li class="cursor-pointer bg-[#fdbb8f] px-2 py-1 rounded-md flex justify-center items-center">Sports</li>
+            <li class="cursor-pointer bg-[#fdbb8f] px-2 py-1 rounded-md flex justify-center items-center">Flag</li>
+        </ul>
+        <form action="" class="">
+            <input type="text" placeholder="search Emoji ..." class="border border-2 border-white px-6 py-2 rounded-4xl bg-emerald-50">
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+    <div class="emojiContainer flex flex-wrap justify-center px-12"></div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

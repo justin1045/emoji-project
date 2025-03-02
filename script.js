@@ -8,6 +8,12 @@ const searchInput = document.querySelector("input");
 
 const form = document.querySelector("form");
 
+const mode = document.getElementById("mode");
+
+const hider = document.getElementById("hider");
+
+const body = document.querySelector("body");
+
 // console.log(emojiContainer);
 // this fuction giving all the emojis as it is coz we need all the emojis when we open the page.
 displayEmojis(emojiList);
@@ -30,7 +36,8 @@ function displayEmojis(arr) {
 form.addEventListener("submit" , (e) => {
     e.preventDefault();
     const filterName = searchInput.value.toLowerCase();
-    const filteredEmojis = search(emojiList, filterName);   
+    const filteredEmojis = search(emojiList, filterName);
+    searchInput.value = "";   
     displayEmojis(filteredEmojis);  
 
 })
@@ -79,4 +86,11 @@ searchInput.addEventListener("keyup", (e) => {
   const filterName = e.target.value.toLowerCase();
   const filteredEmojis = search(emojiList, filterName);   
   displayEmojis(filteredEmojis);
+});
+
+
+mode.addEventListener("click", (e)=>{
+  hider.classList.toggle("right-move");
+  body.classList.toggle("dark-mode");
+  searchInput.style.color = "black"
 });
